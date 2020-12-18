@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.launchService.getLaunchItems().subscribe((resp) => {
       console.log(resp);
-      this.loaderConfig = {...this.loaderConfig, ...{show:false}};
+      this.loaderConfig = {...this.loaderConfig, ...{show: false}};
     });
   }
 

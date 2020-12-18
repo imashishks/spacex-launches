@@ -9,9 +9,8 @@ export class LaunchService {
   constructor(private httpService: HttpService) { }
   getLaunchItems(){
     console.log('dsfsdfsdf');
-    return this.httpService.Get<Array<LaunchModel>>('launches').pipe(map((data)=>{
+    return this.httpService.Get<Array<LaunchModel>>('launches').pipe(map((data) => {
       this.launchList = data;
-      console.log(this.launchList);
       return data;
     }));
   }

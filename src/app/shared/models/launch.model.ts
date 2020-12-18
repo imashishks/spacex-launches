@@ -1,3 +1,3 @@
-export interface LaunchModel{
+export interface LaunchModel {
 
 }
