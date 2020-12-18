@@ -25,7 +25,8 @@
     "component-selector": [
       true,
       "element",
-      "app",
+      "spacex",
+
       "kebab-case"
     ],
     "eofline": true,
