@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'spacex-filter',
@@ -7,13 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
   @Input('config') filterData;
+  @Output() filterKey = new EventEmitter<string>();
   constructor() { }
-
+  selectedItem: string;
   ngOnInit(): void {
-    console.log(this.filterData);
   }
-  test(event){
-    // console.log(event.target.toggleClass("button--active"));
+  itemClicked(item){
+    this.selectedItem = item;
+    this.filterKey.emit(item);
   }
 
 }
