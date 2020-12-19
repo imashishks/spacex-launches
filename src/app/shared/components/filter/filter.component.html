@@ -1,0 +1,11 @@
+<!-- <button class="button" (click)="test($event)">200006</button>
+
+<button class="button" (click)="test($event)">234</button>
+<button class="button" (click)="test($event)">202343240006</button> -->
+<div class="mt-10 flex-align-center flex-dir-col">
+    <p class="paragraph">{{filterData.title}}</p>
+    <hr class="mt-5 wd-80" />
+</div>
+<div class="mt-10 flex-justify-space-between flex-wrap">
+    <button class="button" *ngFor="let data of filterData.data">{{data}}</button>
+</div>

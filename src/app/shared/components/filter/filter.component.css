@@ -1,0 +1,13 @@
+.button{
+    padding: 5px 10px;
+    background: #c5e09b;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin:5px 15px;
+    text-transform: capitalize;
+}
+.button--active {
+    background: #7cba03;
+}
