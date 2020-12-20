@@ -14,11 +14,11 @@ export class LaunchService {
     if (selectedFilters.year){
       params = params.append('year', selectedFilters.year);
     }
-    if (selectedFilters.successfulLaunch){
-      params = params.append('launch_success', selectedFilters.successfulLaunch);
+    if (selectedFilters.successful_launch){
+      params = params.append('launch_success', selectedFilters.successful_launch);
     }
-    if (selectedFilters.successfulLanding){
-      params = params.append('landing_success', selectedFilters.successfulLanding);
+    if (selectedFilters.successful_landing){
+      params = params.append('landing_success', selectedFilters.successful_landing);
     }
 
     // params = params.append('limit', selectedFilters.limit);
