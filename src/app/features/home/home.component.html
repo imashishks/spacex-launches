@@ -1,8 +1,18 @@
 <section class="home__wrap">
-    <p class="home-title mt-30">SpaceX Launches</p>
+    <p class="home-title mt-30">SpaceX Launch Programs</p>
     <spacex-loader [config]="loaderConfig"></spacex-loader>
-    <section class="home__launchlist__wrap">
-        <spacex-launch-item></spacex-launch-item>
-
-    </section>
+    <div class="home__items__wrap">
+        <div class="home__filter__wrap">
+            <spacex-card>
+                <p class="header">Filters</p>
+                <spacex-filter [config]="yearsFilterData" (filterKey)="yearFilterClicked($event)"></spacex-filter>
+                <spacex-filter [config]="successfulLaunchFilterData" (filterKey)="successfulLaunchFilterClicked($event)"  ></spacex-filter>
+                <spacex-filter [config]="successfulLandingFilterData" (filterKey)="successfulLandingFilterClicked($event)" ></spacex-filter>
+            </spacex-card>
+        </div>
+        <div class="home__launchlist__wrap">
+            <spacex-launch-item class="home__launch-item" *ngFor="let launch of launchItems;" [data]="launch"></spacex-launch-item>
+        </div>
+    </div>
+    
 </section>

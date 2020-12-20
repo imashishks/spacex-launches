@@ -1,5 +1,55 @@
 .home-title{
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
+}
+.home__items__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home__filter__wrap{
+    width:260px;
+}
+.home__launchlist__wrap{
+    flex:1;
+}
+.home__wrap{
+    max-width: 1440px;
+    margin: auto;
+}
+.home__launch-item{
+    margin: 10px;
+}
+
+/*  For all devices greater than mobile */
+@media screen and (min-width: 700px) {
+    .home__items__wrap {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .home-title{
+        text-align: left;
+        margin-left: 20px;
+    }
+    .home__launchlist__wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .home__filter__wrap{
+        margin:10px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+    .home__launch-item{
+        width: calc( 50% - 20px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home__launch-item{
+        width: calc(25% - 20px);
+    }
+    
 }
