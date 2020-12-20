@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LaunchModel } from '../../models/launch.model';
 
 @Component({
   selector: 'spacex-launch-item',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./launch-item.component.css']
 })
 export class LaunchItemComponent implements OnInit {
-
+  @Input('data') launchData: LaunchModel;
   constructor() { }
 
   ngOnInit(): void {

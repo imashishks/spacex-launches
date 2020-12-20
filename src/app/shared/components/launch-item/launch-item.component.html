@@ -1,1 +1,15 @@
-<p>launch-item works!</p>
+<article class="launch-item">
+    <spacex-card class="flex-container launch-card">
+        <img [alt]="launchData.mission_name" class="launch-item__image" [src] = "launchData.links.mission_patch_small" width="256" height="256" />
+        <p class="mt-10 header-primary">{{launchData.mission_name}} # {{launchData.flight_number}}</p>
+        <div *ngIf="launchData.mission_id && launchData.mission_id.length">
+            <p class="mt-10 header">Mission ids:</p>
+            <ul class="mt-10 ml-30 paragraph">
+                <li class="paragraph-primary" *ngFor="let missionId of launchData.mission_id">{{missionId}}</li>
+            </ul>
+        </div>
+        <p class="mt-10 paragraph-bold"> Launch Year: <span class="paragraph-primary">{{launchData.launch_year}}</span></p>
+        <p class="mt-10 paragraph-bold"> Successful Launch: <span class="paragraph-primary">{{launchData.launch_success}}</span></p>
+        <p class="mt-10 paragraph-bold"> Successful Landing: <span class="paragraph-primary">{{launchData.launch_landing || false}}</span></p>
+    </spacex-card>
+</article>  

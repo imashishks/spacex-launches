@@ -1,0 +1,13 @@
+.launch-item__image{
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+}
+.launch-item{
+    height: 100%;
+}
+.launch-card{
+    height: 100%;
+}
