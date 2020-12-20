@@ -14,10 +14,6 @@
 .home__launchlist__wrap{
     flex:1;
 }
-.home__wrap{
-    max-width: 1440px;
-    margin: auto;
-}
 .home__launch-item{
     margin: 10px;
 }

@@ -9,5 +9,7 @@
     height: 100%;
 }
 .launch-card{
+    max-width: 260px;
+    margin: 0 auto;
     height: 100%;
 }
