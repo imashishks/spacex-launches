@@ -10,7 +10,7 @@ export class LaunchService {
   constructor(private httpService: HttpService) { }
   getLaunchItems(selectedFilters){
     let params = new HttpParams();
-    params = params.append('limit', '50');
+    params = params.append('limit', selectedFilters.limit);
     if (selectedFilters.year){
       params = params.append('year', selectedFilters.year);
     }
