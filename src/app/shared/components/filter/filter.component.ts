@@ -7,10 +7,11 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 })
 export class FilterComponent implements OnInit {
   @Input('config') filterData;
-  @Output() filterKey = new EventEmitter<string>();
+  @Input('selectedFilter') selectedItem: string | boolean | number;
+  @Output() filterKey = new EventEmitter<string | boolean | number>();
   constructor() { }
-  selectedItem: string;
   ngOnInit(): void {
+    console.log(typeof(this.selectedItem));
   }
   itemClicked(item){
     this.selectedItem = item;

@@ -10,7 +10,7 @@
     <button 
         class="button" 
         *ngFor="let item of filterData.data" 
-        [ngClass]="{'button--active': selectedItem === item}"
+        [ngClass]="{'button--active': selectedItem == item}"
         (click)="itemClicked(item)"
     >
     {{item}}

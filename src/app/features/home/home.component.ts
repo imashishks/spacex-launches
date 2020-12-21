@@ -29,13 +29,13 @@ export class HomeComponent implements OnInit {
   };
   launchItems: Array< LaunchModel>;
   selectedFilters = {
-    limit: 100,
+    limit: 60,
     year: '',
     successful_launch: null,
     successful_landing: null
   };
   ngOnInit(): void {
-    this.getLaunchData();
+    this.updateParams();
   }
   yearFilterClicked(data){
     //  To ensure that we don't fetch data if the same filter is clicked
@@ -78,5 +78,11 @@ export class HomeComponent implements OnInit {
         relativeTo: this.activateRoute,
         queryParams
       });
+  }
+  updateParams(){
+    this.activateRoute.queryParams.subscribe(params => {
+      this.selectedFilters = {...this.selectedFilters, ...params};
+      this.getLaunchData();
+    }).unsubscribe();
   }
 }

@@ -4,9 +4,22 @@
         <div class="home__filter__wrap">
             <spacex-card>
                 <p class="header">Filters</p>
-                <spacex-filter [config]="yearsFilterData" (filterKey)="yearFilterClicked($event)"></spacex-filter>
-                <spacex-filter [config]="successfulLaunchFilterData" (filterKey)="successfulLaunchFilterClicked($event)"  ></spacex-filter>
-                <spacex-filter [config]="successfulLandingFilterData" (filterKey)="successfulLandingFilterClicked($event)" ></spacex-filter>
+                <spacex-filter 
+                    [config]="yearsFilterData"
+                    (filterKey)="yearFilterClicked($event)"
+                    [selectedFilter]="selectedFilters.year"
+                ></spacex-filter>
+                <spacex-filter 
+                    [config]="successfulLaunchFilterData"
+                    (filterKey)="successfulLaunchFilterClicked($event)"
+                    [selectedFilter]="selectedFilters.successful_launch" 
+                ></spacex-filter>
+                <spacex-filter 
+                    [config]="successfulLandingFilterData" 
+                    (filterKey)="successfulLandingFilterClicked($event)"
+                    [selectedFilter]="selectedFilters.successful_landing" 
+                 >
+                </spacex-filter>
             </spacex-card>
         </div>
         <div class="home__launchlist__wrap">
