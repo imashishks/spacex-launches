@@ -3,6 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'spacex-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {}

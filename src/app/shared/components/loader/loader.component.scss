@@ -1,10 +1,5 @@
-.loader__overlay {
-  z-index: 1000000;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
+
+@import '../../../../assets/styles/variables.scss';
 .loader__wrap {
   background: rgba(255, 255, 255, 0.4);
   width: 100%;
@@ -19,12 +14,12 @@
 }
 
 .loader {
-  border: 3px solid #f3f3f3;
+  border: 3px solid $spacex-grey-light;
   border-radius: 50%;
-  border-top: 4px solid #0033aa;
+  border-top: 4px solid $spacex-primary-dark;
   border-radius: 50%;
-  border-top: 4px solid #0033aa;
-  border-right: 4px solid #0033aa;
+  border-top: 4px solid $spacex-primary-dark;
+  border-right: 4px solid $spacex-primary-dark;
   width: 44px;
   height: 44px;
   -webkit-animation: spin 1s linear infinite;

@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables.scss';
 *{
     margin:0;
     padding:0;
 }
 body{
     font-family: Open sans, sans-serif;
-    background-color: #f2f2f2;
+    background-color: $spacex-grey-light;
 }
 
 .mt-5{
@@ -15,9 +16,6 @@ body{
     margin-top:10px;
 }
 
-.mt-20{
-    margin-top:20px;
-}
 
 .mt-30{
     margin-top:30px;

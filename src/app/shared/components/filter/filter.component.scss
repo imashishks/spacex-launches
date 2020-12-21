@@ -1,6 +1,7 @@
+@import '../../../../assets/styles/variables.scss';
 .button{
     padding: 5px 20px;
-    background: #c5e09b;
+    background: $spacex-primary;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -9,5 +10,5 @@
     text-transform: capitalize;
 }
 .button--active {
-    background: #7cba03;
+    background: $spacex-primary-dark;
 }

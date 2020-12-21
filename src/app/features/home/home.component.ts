@@ -7,7 +7,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'spacex-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   constructor(private launchService: LaunchService, private router: Router, private activateRoute: ActivatedRoute) { }
@@ -83,6 +83,6 @@ export class HomeComponent implements OnInit {
     this.activateRoute.queryParams.subscribe(params => {
       this.selectedFilters = {...this.selectedFilters, ...params};
       this.getLaunchData();
-    }).unsubscribe();
+    });
   }
 }

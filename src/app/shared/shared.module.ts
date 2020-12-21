@@ -4,6 +4,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { LaunchItemComponent } from './components/launch-item/launch-item.component';
 import { CardComponent } from './components/card/card.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { LoaderDirective } from './directives/loader/loader.directive';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FilterComponent } from './components/filter/filter.component';
    LoaderComponent,
    LaunchItemComponent,
    CardComponent,
-   FilterComponent
+   FilterComponent,
+   LoaderDirective
   ],
   imports: [
     CommonModule
@@ -23,7 +25,10 @@ import { FilterComponent } from './components/filter/filter.component';
     LoaderComponent,
     LaunchItemComponent,
     CardComponent,
-    FilterComponent
+    FilterComponent,
+
+    // Directives
+    LoaderDirective
   ],
 })
 export class SharedModule {}
