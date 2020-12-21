@@ -5,8 +5,6 @@ import {  map } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 @Injectable()
 export class LaunchService {
-  private launchItem: LaunchModel;
-  private launchList: Array<LaunchModel>;
   constructor(private httpService: HttpService) { }
   getLaunchItems(selectedFilters){
     let params = new HttpParams();
@@ -20,13 +18,6 @@ export class LaunchService {
     if (selectedFilters.successful_landing){
       params = params.append('landing_success', selectedFilters.successful_landing);
     }
-
-    // params = params.append('limit', selectedFilters.limit);
-    // params = params.append('sortBy', selectedFilters.sortBy);
-
-    return this.httpService.Get<Array<LaunchModel>>('launches', params).pipe(map((data) => {
-      this.launchList = data;
-      return data;
-    }));
+    return this.httpService.Get<Array<LaunchModel>>('launches', params);
   }
 }

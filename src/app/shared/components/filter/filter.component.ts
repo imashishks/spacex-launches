@@ -17,5 +17,4 @@ export class FilterComponent implements OnInit {
     this.selectedItem = item;
     this.filterKey.emit(item);
   }
-
 }

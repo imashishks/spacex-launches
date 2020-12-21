@@ -17,7 +17,7 @@ import { FilterComponent } from './components/filter/filter.component';
     CommonModule
   ],
   exports: [
-    // modules
+    // Modules
     CommonModule,
     // Components
     LoaderComponent,
