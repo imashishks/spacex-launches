@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   } ;
   launchItems: Array< LaunchModel>;
   selectedFilters = {
-    limit: 1,
+    limit: 100,
     launch_success: null,
     land_success: null,
     launch_year: '',
