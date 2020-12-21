@@ -28,19 +28,13 @@ Highlighting the project structure
 
 ```
 
-### Core
-This folder contains the universal components and other features where there’s only once instance per application.The core module is directly added to the app module 
-```
-     |— core
-	        |— components
-               |— header
-                    |— header.component.ts|html|css|spec
-               |— footer
-                    |— footer.component.ts|html|css|spec   
-	        |— services
-               |— http.service.ts|spec
-          |— core.module.ts
-```
+ Core
+This folder contains the universal components and other features where there’s only once instance per application.The core module is directly added to the app module. 
+	*  *Components*
+	        1. Header - This is the component which contains the header part of the app
+	        2. Footer - This is the component which contains the footer part of the app
+  *  *Services*
+	        1. Http - This is the service which is used to make get request
 
 ### Feature
 This folder represents the individual feature component. This project has only one feature i.e. home
