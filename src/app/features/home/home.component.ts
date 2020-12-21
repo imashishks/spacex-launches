@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
     const objKeys = Object.keys(this.selectedFilters);
     const queryParams = {};
     objKeys.forEach( (key) => {
-      if ( this.selectedFilters[key]){
+      if ( this.selectedFilters[key] && this.selectedFilters[key] !== 'false'){
         queryParams[key] = this.selectedFilters[key];
       }
     });
