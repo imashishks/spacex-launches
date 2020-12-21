@@ -22,12 +22,25 @@ Highlighting the project structure
           |— [+] models
  	        |— [+] services
 	        |— share.module.ts
-    |— app.component
+     |— app.component.ts|html|scss|spec
+     |— app-routing.module.ts
+     |— app.module.ts
 
 ```
 
 ### Core
 This folder contains the universal components and other features where there’s only once instance per application.The core module is directly added to the app module 
+```
+     |— core
+	        |— components
+            |— header
+               |— header.component.ts|html|css|spec
+            |— footer
+               |— header.component.ts|html|css|spec   
+	        |— services
+            |— http.service.ts|spec
+          |— core.module.ts
+```
 
 ### Feature
 This folder represents the individual feature component. This project has only one feature i.e. home
