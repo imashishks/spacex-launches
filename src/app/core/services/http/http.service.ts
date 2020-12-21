@@ -4,6 +4,7 @@ import {
   HttpParams,
 } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -13,7 +14,7 @@ export class HttpService {
     return environment.restApiUrl + path;
   }
   // Get Request
-  Get<Response>(path: string, params?: HttpParams) {
+  Get<Response>(path: string, params?: HttpParams): Observable<Response> {
     return this.httpClient.get<Response>(this.getURL(path), {
       params,
     });

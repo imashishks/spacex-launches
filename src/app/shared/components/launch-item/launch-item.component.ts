@@ -6,11 +6,6 @@ import { LaunchModel } from '../../models/launch.model';
   templateUrl: './launch-item.component.html',
   styleUrls: ['./launch-item.component.css']
 })
-export class LaunchItemComponent implements OnInit {
+export class LaunchItemComponent{
   @Input('data') launchData: LaunchModel;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

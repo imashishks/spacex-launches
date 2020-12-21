@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   };
   launchItems: Array< LaunchModel>;
   selectedFilters = {
-    limit: 60,
+    limit: '60',
     year: '',
     successful_launch: null,
     successful_landing: null
@@ -37,26 +37,26 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.updateParams();
   }
-  yearFilterClicked(data){
+  yearFilterClicked(data): void {
     //  To ensure that we don't fetch data if the same filter is clicked
     if ( this.selectedFilters.year !== data ) {
       this.selectedFilters.year = data;
       this.getLaunchData();
     }
   }
-  successfulLaunchFilterClicked(data){
+  successfulLaunchFilterClicked(data): void{
     if ( this.selectedFilters.successful_launch !== data ) {
       this.selectedFilters.successful_launch = data;
       this.getLaunchData();
     }
   }
-  successfulLandingFilterClicked(data){
+  successfulLandingFilterClicked(data): void{
     if ( this.selectedFilters.successful_landing !== data ) {
       this.selectedFilters.successful_landing = data;
       this.getLaunchData();
     }
   }
-  getLaunchData(){
+  getLaunchData(): void{
     this.loaderConfig = {...this.loaderConfig, ...{show: true}};
     this.updateRoute();
     this.launchService.getLaunchItems(this.selectedFilters).subscribe((resp) => {
@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
       this.loaderConfig = {...this.loaderConfig, ...{show: false}};
     });
   }
-  updateRoute(){
+  updateRoute(): void{
     const objKeys = Object.keys(this.selectedFilters);
     const queryParams = {};
     objKeys.forEach( (key) => {
@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit {
         queryParams
       });
   }
-  updateParams(){
+  updateParams(): void{
     this.activateRoute.queryParams.subscribe(params => {
       this.selectedFilters = {...this.selectedFilters, ...params};
       this.getLaunchData();

@@ -5,15 +5,12 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css']
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
   @Input('config') filterData;
-  @Input('selectedFilter') selectedItem: string | boolean | number;
-  @Output() filterKey = new EventEmitter<string | boolean | number>();
-  constructor() { }
-  ngOnInit(): void {
-    console.log(typeof(this.selectedItem));
-  }
-  itemClicked(item: string | boolean | number): void{
+  @Input('selectedFilter') selectedItem: string ;
+  @Output() filterKey = new EventEmitter<string >();
+  
+  itemClicked(item: string): void{
     this.selectedItem = item;
     this.filterKey.emit(item);
   }
