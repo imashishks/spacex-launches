@@ -1,6 +1,9 @@
-# Spacex
+# Spacex Launches
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+## About the Application
+This application lists out all the space exploration which have happened over the course of history. There are filters provided to streamline the results based on year and whether the launch and landing were successful or not.
+
+
 
 ## Development server
 
