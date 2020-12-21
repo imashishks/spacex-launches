@@ -13,7 +13,7 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {
     console.log(typeof(this.selectedItem));
   }
-  itemClicked(item){
+  itemClicked(item: string | boolean | number): void{
     this.selectedItem = item;
     this.filterKey.emit(item);
   }

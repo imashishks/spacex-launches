@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {LaunchModel} from '../../models/launch.model';
-import { HttpService } from '../http/http.service';
+import { HttpService } from '../../../core/services/http/http.service';
 import {  map } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 @Injectable()
