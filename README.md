@@ -33,9 +33,11 @@ Core This folder contains the universal components and other features where ther
   - ##### Components
     1.  Header - This is the component which contains the header part of the app
     2.  Footer - This is the component which contains the footer part of the app
+    3.  Loader - This is loader component which is shown every time a service request happens
   - ##### Services
     1.  Http - This is the service which is used to make get request
-	        1. Http - This is the service which is used to make get request
+	  2. Loader - This is the service which is used to set the show/hide property of loader
+    2. LoaderInterceptor - This is an interceptor to set the loader property
 
 ### Feature
 This folder represents the individual feature component. This project has only one feature i.e. home
@@ -69,3 +71,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# The app is hosted at:
+
+https://spacex-launch-api.herokuapp.com/home
