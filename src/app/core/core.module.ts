@@ -10,7 +10,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LoaderComponent],
-  imports: [HomeModule, HttpClientModule,CommonModule],
+  imports: [HomeModule, HttpClientModule, CommonModule],
   exports: [
     // Modules
     HomeModule,

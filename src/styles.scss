@@ -8,48 +8,33 @@ body{
     font-family: Open sans, sans-serif;
     background-color: $spacex-grey-light;
 }
-
-.mt-5{
-    margin-top:5px;
-}
 .mt-10{
     margin-top:10px;
 }
-
-
-.mt-30{
-    margin-top:30px;
-}
-.mb-30{
-    margin-bottom:30px;
-}
-
 .ml-30{
     margin-left:30px;
 }
-
-
 /* Typography */
 .header-primary{
-    color: #4b5791;
+    color: $spacex-accent;
     font-weight: 600;
 }
 .header{
-    color: #333;
+    color: $spacex-grey-dark;
     font-weight: 600;
 }
 .paragraph{
-    color: #333;
+    color: $spacex-grey-dark;
     font-weight: 100;
     font-size: 14px;
 }
 .paragraph-bold{
-    color: #333;
+    color: $spacex-grey-dark;
     font-weight: 600;
     font-size: 14px;
 }
 .paragraph-primary{
-    color: #4b5791;
+    color: $spacex-accent;
     font-weight: 100;
     font-size: 14px;
 }
@@ -75,21 +60,4 @@ body{
 }
 .flex-wrap{
     flex-wrap: wrap;
-}
-.float-left{
-    float: left;
-}
-
-
-
-/* Alignment */
-
-.text-align-center{
-    text-align: center;
-}
-
-/* Dimensions */
-
-.wd-80{
-    width: 80%;
 }
