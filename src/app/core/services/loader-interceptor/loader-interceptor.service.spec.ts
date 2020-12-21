@@ -1,16 +1,31 @@
 import { TestBed } from '@angular/core/testing';
-
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderInterceptor } from './loader-interceptor.service';
 
 describe('LoaderInterceptorService', () => {
-  let service: LoaderInterceptor;
+  // let service: LoaderInterceptor;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LoaderInterceptor);
+    let httpMock: HttpTestingController;
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: LoaderInterceptor,
+          multi: true,
+        },
+      ],
+    });
+    // service = TestBed.inject(LoaderInterceptor);
+    httpMock = TestBed.inject(HttpTestingController);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should set ', () => {
+    // expect(service).toBeTruthy();
   });
 });

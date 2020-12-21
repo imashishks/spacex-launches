@@ -17,10 +17,10 @@ describe('LaunchService', () => {
   });
   it('should be able to return an observable of Launch data', (done) => {
     const dummyData: Array<LaunchModel> = [{
-      mission_name: 'RatSat',
-      flight_number: 4,
-      mission_id: [],
-      launch_year: '2008',
+      mission_name: 'Iridium NEXT Mission 1',
+      flight_number: 35,
+      mission_id: [ 'F3364BF' ],
+      launch_year: '2017',
       launch_success: true
     }];
     const selectedParams = {

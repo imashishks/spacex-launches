@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterComponent } from 'src/app/shared/components/filter/filter.component';
 import { CardComponent } from 'src/app/shared/components/card/card.component';
 
-fdescribe('HomeComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
