@@ -4,7 +4,7 @@ import { HttpService } from './http.service';
 import { HttpClientModule, HttpParams } from '@angular/common/http';
 import { LaunchModel } from 'src/app/shared/models/launch.model';
 
-fdescribe('HttpService', () => {
+describe('HttpService', () => {
   let service: HttpService;
 
   beforeEach(() => {

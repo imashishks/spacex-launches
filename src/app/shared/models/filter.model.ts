@@ -1,7 +1,7 @@
 export interface FilterModel{
-    limit: string;
-    year: string;
-    successful_launch: string;
-    successful_landing: string;
+    limit: number;
+    launch_year: string;
+    launch_success: string;
+    land_success: string;
 }
 

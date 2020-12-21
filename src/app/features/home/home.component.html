@@ -1,5 +1,4 @@
 <section class="home__wrap">
-    
     <div class="home__items__wrap">
         <div class="home__filter__wrap">
             <spacex-card>
@@ -7,17 +6,17 @@
                 <spacex-filter 
                     [config]="yearsFilterData"
                     (filterKey)="yearFilterClicked($event)"
-                    [selectedFilter]="selectedFilters.year"
+                    [selectedFilter]="selectedFilters.launch_year"
                 ></spacex-filter>
                 <spacex-filter 
                     [config]="successfulLaunchFilterData"
                     (filterKey)="successfulLaunchFilterClicked($event)"
-                    [selectedFilter]="selectedFilters.successful_launch" 
+                    [selectedFilter]="selectedFilters.launch_success" 
                 ></spacex-filter>
                 <spacex-filter 
                     [config]="successfulLandingFilterData" 
                     (filterKey)="successfulLandingFilterClicked($event)"
-                    [selectedFilter]="selectedFilters.successful_landing" 
+                    [selectedFilter]="selectedFilters.land_success" 
                  >
                 </spacex-filter>
             </spacex-card>

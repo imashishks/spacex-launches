@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {LoaderModel} from '../../shared/models/config.model';
 import { LaunchService} from '../../shared/services/launch/launch.service';
 import { LaunchModel } from 'src/app/shared/models/launch.model';
 import { YEARS, LAUNCH_OPTIONS } from 'src/app/shared/constants/filter.constant';
@@ -23,45 +22,39 @@ export class HomeComponent implements OnInit {
     title: 'Successful Landing',
     data: LAUNCH_OPTIONS
   } ;
-  loaderConfig: LoaderModel = {
-    show: true,
-    showFullScreen: true,
-  };
   launchItems: Array< LaunchModel>;
   selectedFilters = {
-    limit: '60',
-    year: '',
-    successful_launch: null,
-    successful_landing: null
+    limit: 1,
+    launch_success: null,
+    land_success: null,
+    launch_year: '',
   };
   ngOnInit(): void {
     this.updateParams();
   }
   yearFilterClicked(data): void {
     //  To ensure that we don't fetch data if the same filter is clicked
-    if ( this.selectedFilters.year !== data ) {
-      this.selectedFilters.year = data;
+    if ( this.selectedFilters.launch_year !== data ) {
+      this.selectedFilters.launch_year = data;
       this.getLaunchData();
     }
   }
   successfulLaunchFilterClicked(data): void{
-    if ( this.selectedFilters.successful_launch !== data ) {
-      this.selectedFilters.successful_launch = data;
+    if ( this.selectedFilters.launch_success !== data ) {
+      this.selectedFilters.launch_success = data;
       this.getLaunchData();
     }
   }
   successfulLandingFilterClicked(data): void{
-    if ( this.selectedFilters.successful_landing !== data ) {
-      this.selectedFilters.successful_landing = data;
+    if ( this.selectedFilters.land_success !== data ) {
+      this.selectedFilters.land_success = data;
       this.getLaunchData();
     }
   }
   getLaunchData(): void{
-    this.loaderConfig = {...this.loaderConfig, ...{show: true}};
     this.updateRoute();
     this.launchService.getLaunchItems(this.selectedFilters).subscribe((resp) => {
       this.launchItems = [...resp];
-      this.loaderConfig = {...this.loaderConfig, ...{show: false}};
     });
   }
   updateRoute(): void{

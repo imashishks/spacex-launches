@@ -4,7 +4,7 @@ import { LaunchService } from './launch.service';
 import { CoreModule } from 'src/app/core/core.module';
 import { LaunchModel } from '../../models/launch.model';
 
-fdescribe('LaunchService', () => {
+describe('LaunchService', () => {
   let service: LaunchService;
 
   beforeEach(() => {
@@ -24,10 +24,10 @@ fdescribe('LaunchService', () => {
       launch_success: true
     }];
     const selectedParams = {
-      limit: '1',
-      year: '2017',
-      successful_launch : 'true',
-      successful_landing: null
+      limit: 1,
+      launch_year: '2017',
+      launch_success : 'true',
+      land_success: null
     };
     service.getLaunchItems(selectedParams).subscribe((data: Array<LaunchModel>) => {
          expect(data.length).toBe(1);

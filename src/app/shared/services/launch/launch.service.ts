@@ -9,15 +9,15 @@ export class LaunchService {
   constructor(private httpService: HttpService) { }
   getLaunchItems(selectedFilters: FilterModel): Observable< Array<LaunchModel>>{
     let params = new HttpParams();
-    params = params.append('limit', selectedFilters.limit);
-    if (selectedFilters.year){
-      params = params.append('year', selectedFilters.year);
+    params = params.append('limit', selectedFilters.limit.toString());
+    if (selectedFilters.launch_success){
+      params = params.append('launch_success', selectedFilters.launch_success);
     }
-    if (selectedFilters.successful_launch){
-      params = params.append('launch_success', selectedFilters.successful_launch);
+    if (selectedFilters.land_success){
+      params = params.append('land_success', selectedFilters.land_success);
     }
-    if (selectedFilters.successful_landing){
-      params = params.append('landing_success', selectedFilters.successful_landing);
+    if (selectedFilters.launch_year){
+      params = params.append('launch_year', selectedFilters.launch_year.toString());
     }
     return this.httpService.Get<Array<LaunchModel>>('launches', params);
   }
