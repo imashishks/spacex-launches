@@ -33,12 +33,12 @@ This folder contains the universal components and other features where there’s
 ```
      |— core
 	        |— components
-            |— header
-               |— header.component.ts|html|css|spec
-            |— footer
-               |— header.component.ts|html|css|spec   
+               |— header
+                    |— header.component.ts|html|css|spec
+               |— footer
+                    |— footer.component.ts|html|css|spec   
 	        |— services
-            |— http.service.ts|spec
+               |— http.service.ts|spec
           |— core.module.ts
 ```
 
