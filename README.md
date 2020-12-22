@@ -76,6 +76,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![alt text](https://github.com/imashishks/spacex-launches/blob/master/code-coverage.png)
 
+## Lighthouse Report
+
+![alt text](https://github.com/imashishks/spacex-launches/blob/master/lighthouse.png)
+
+
 
 # The app is hosted at:
 
