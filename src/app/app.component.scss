@@ -1,6 +1,70 @@
 
+@import '../assets/styles/variables.scss';
 
-    .app__wrap{
-        max-width: 1440px;
-        margin: auto;
-    }
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Open sans, sans-serif;
+    background-color: $spacex-grey-light;
+}
+.mt-10{
+    margin-top:10px;
+}
+.ml-30{
+    margin-left:30px;
+}
+/* Typography */
+.header-primary{
+    color: $spacex-accent;
+    font-weight: 600;
+}
+.header{
+    color: $spacex-grey-dark;
+    font-weight: 600;
+}
+.paragraph{
+    color: $spacex-grey-dark;
+    font-weight: 100;
+    font-size: 0.875em;
+}
+.paragraph-bold{
+    color: $spacex-grey-dark;
+    font-weight: 600;
+    font-size:  0.875em;
+}
+.paragraph-primary{
+    color: $spacex-accent;
+    font-weight: 100;
+    font-size:  0.875em;
+}
+
+
+/* Layout */
+.flex-container{
+    display: flex;
+}
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+.flex-justify-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-dir-col{
+    flex-direction: column;
+}
+.align-self-center{
+    align-self:center; 
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.app__wrap{
+    max-width: 1440px;
+    margin: auto;
+}
