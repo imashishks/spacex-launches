@@ -7,14 +7,14 @@ This application lists out all the space exploration which have happened over th
 Highlighting the project structure
 ```|— app
      |— core
-	        |— [+] components
-	        |— [+] services
+          |— [+] components
+          |— [+] services
           |— core.module.ts
      |— features
-	        |— home
-               |— home.component.ts|html|scss|spec
-               |— home-routing.module.ts
-               |— home.module.ts
+          |— home
+          |— home.component.ts|html|scss|spec
+          |— home-routing.module.ts
+          |— home.module.ts
      |— shared
           |— [+] components
           |— [+] directives
