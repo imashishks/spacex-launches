@@ -72,6 +72,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Code Coverage
+
+![alt text](https://github.com/imashishks/spacex-launches/blob/master/code-coverage.png)
+
+
 # The app is hosted at:
 
 https://spacex-launch-api.herokuapp.com/home
