@@ -4,9 +4,18 @@ import { HttpService } from '../../../core/services/http/http.service';
 import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FilterModel } from '../../models/filter.model';
+
+/**
+ * Injectable - This service  has function to fetch the launch item based on the params
+ */
 @Injectable()
 export class LaunchService {
   constructor(private httpService: HttpService) { }
+  /**
+   * Gets launch items
+   * @param selectedFilters - An object containing all the params
+   * @returns launch items - An obseravable of all the launch items returned from HTTP call
+   */
   getLaunchItems(selectedFilters: FilterModel): Observable< Array<LaunchModel>>{
     let params = new HttpParams();
     params = params.append('limit', selectedFilters.limit.toString());

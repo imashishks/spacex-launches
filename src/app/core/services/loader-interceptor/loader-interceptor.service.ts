@@ -1,4 +1,3 @@
-// loader-interceptor.service.ts
 import { Injectable } from '@angular/core';
 import {
   HttpResponse,
@@ -10,7 +9,11 @@ import {
 import { Observable } from 'rxjs';
 import { LoaderService } from '../loader/loader.service';
 import { tap } from 'rxjs/operators';
+/**
+ * Injectable - This interceptor is used to update the behaviorsubject for loader to show / hide the observable
+ */
 @Injectable()
+
 export class LoaderInterceptor implements HttpInterceptor {
   private requests: HttpRequest<any>[] = [];
 

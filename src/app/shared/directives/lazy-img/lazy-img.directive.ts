@@ -1,5 +1,7 @@
 import { ElementRef, Directive } from '@angular/core';
-
+/**
+ * Directive - It adds a lazy loading attribute to images if it is supported
+ */
 // tslint:disable-next-line: directive-selector
 @Directive({ selector: 'img' })
 export class LazyImgDirective {
