@@ -20,8 +20,8 @@ Highlighting the project structure
           |— [+] directives
           |— [+] constants
           |— [+] models
- 	        |— [+] services
-	        |— share.module.ts
+          |— [+] services
+          |— share.module.ts
      |— app.component.ts|html|scss|spec
      |— app-routing.module.ts
      |— app.module.ts
