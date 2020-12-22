@@ -21,7 +21,7 @@
                 </spacex-filter>
             </spacex-card>
         </div>
-        <div class="home__launchlist__wrap">
+        <div class="home__launchlist__wrap" *ngIf="launchItems?.length">
             <spacex-launch-item class="home__launch-item" *ngFor="let launch of launchItems;" [data]="launch"></spacex-launch-item>
         </div>
     </div>
